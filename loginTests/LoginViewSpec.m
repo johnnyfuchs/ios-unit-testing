@@ -167,7 +167,8 @@ describe(@"A login view", ^{
         });
     });
 
-    context(@"Model updating", ^{
+    //
+    context(@"Model updating from view", ^{
 
         it(@"Loads the model with the username from the text field", ^{
             view.usernameField.text = @"EweserMame";
