@@ -60,7 +60,7 @@ describe(@"A login view", ^{
 
         it(@"Should have a minium width", ^{
             CGFloat minimumWidth = 320.0;
-            [[theValue(CGRectGetHeight(view.frame)) should] beGreaterThanOrEqualTo:theValue(minimumWidth)];
+            [[theValue(CGRectGetWidth(view.frame)) should] beGreaterThanOrEqualTo:theValue(minimumWidth)];
         });
 
         it(@"Should not default to hidden", ^{

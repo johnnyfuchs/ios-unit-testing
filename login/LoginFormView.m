@@ -5,7 +5,6 @@
 
 #import "LoginFormView.h"
 #import "UIColor+EE.h"
-#import "ViewController.h"
 #import "FormModel.h"
 
 
@@ -31,13 +30,14 @@
         self.passwordField.backgroundColor = [UIColor grayColor];
         [self addSubview:self.passwordField];
 
-        self.submitButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.submitButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         self.submitButton.frame = bounds;
-        [self.submitButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [self.submitButton setBackgroundColor:[UIColor pinkColor]];
-
-        [self.submitButton addTarget:self action:@selector(handleSubmit) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.submitButton];
+
+        [self.submitButton setTitle:@"SomeTitle" forState:UIControlStateNormal];
+        [self.submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.submitButton.backgroundColor = [UIColor pinkColor];
+        [self.submitButton addTarget:self action:@selector(handleSubmit) forControlEvents:UIControlEventTouchUpInside];
 
         // 2
         self.passwordField.secureTextEntry = YES;
@@ -53,6 +53,7 @@
     }
     [self.passwordField resignFirstResponder];
     [self.usernameField resignFirstResponder];
+
     self.onSubmit(self);
 }
 
@@ -78,6 +79,7 @@
     self.passwordField.text = model.password;
 
     [self.submitButton setTitle:model.loginTitle forState:UIControlStateNormal];
+
 }
 
 - (FormModel *)model {

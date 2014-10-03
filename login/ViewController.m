@@ -20,13 +20,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.view.backgroundColor = [UIColor whiteColor];
+
     FormModel *model = [FormModel new];
     model.passwordPlaceholder = @"Pass";
     model.usernamePlaceholder = @"Ur name";
+    model.loginTitle = @"Login!";
 
     self.loginView = [[LoginFormView alloc] init];
     [self.view addSubview:self.loginView];
     self.loginView.model = model;
+    [self.loginView setOnSubmit:^(LoginFormView *loginFormView) {
+        [[[UIAlertView alloc] initWithTitle:@"Done." message:@"Go eat." delegate:nil  cancelButtonTitle:@"ok" otherButtonTitles:nil] show];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
