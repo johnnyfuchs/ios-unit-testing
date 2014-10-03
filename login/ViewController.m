@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LoginFormView.h"
+#import "FormModel.h"
 
 @interface ViewController ()
 
@@ -19,9 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    FormModel *model = [FormModel new];
+    model.passwordPlaceholder = @"Pass";
+    model.usernamePlaceholder = @"Ur name";
+
     self.loginView = [[LoginFormView alloc] init];
     [self.view addSubview:self.loginView];
-
+    self.loginView.model = model;
 }
 
 - (void)didReceiveMemoryWarning {

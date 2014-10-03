@@ -14,6 +14,8 @@
 		B2E1871019DE93190092BF7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E1870F19DE93190092BF7B /* Images.xcassets */; };
 		BB2ED1510211A261E086C9D7 /* LoginViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2ED371CF4591DAF70EC138 /* LoginViewSpec.m */; };
 		BB2ED886B8A5C48D51366038 /* LoginFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2ED8371D510C13ABF91052 /* LoginFormView.m */; };
+		BB2ED99A1293D04BD6689EFE /* UIColor+EE.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2EDC8C059BC571ECD14524 /* UIColor+EE.m */; };
+		BB2EDEEC94AE066E25870439 /* FormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2ED9322610B9965FBF011F /* FormModel.m */; };
 		D183358E01B947AFA446276E /* libPods-loginTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4E6FA053B34F63A61582AD /* libPods-loginTests.a */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +44,11 @@
 		B2E1871D19DE93190092BF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB2ED371CF4591DAF70EC138 /* LoginViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewSpec.m; sourceTree = "<group>"; };
 		BB2ED5C40B8A6FEF558AAA3A /* LoginFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginFormView.h; sourceTree = "<group>"; };
+		BB2ED6A72B9D67FAFCAC8015 /* UIColor+EE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+EE.h"; sourceTree = "<group>"; };
+		BB2ED6A894187C83B5AE8014 /* FormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormModel.h; sourceTree = "<group>"; };
 		BB2ED8371D510C13ABF91052 /* LoginFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginFormView.m; sourceTree = "<group>"; };
+		BB2ED9322610B9965FBF011F /* FormModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormModel.m; sourceTree = "<group>"; };
+		BB2EDC8C059BC571ECD14524 /* UIColor+EE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EE.m"; sourceTree = "<group>"; };
 		D31287655D7C4106BF5651CC /* Pods-loginTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginTests.xcconfig"; path = "Pods/Pods-loginTests.xcconfig"; sourceTree = "<group>"; };
 		FB7263C5DED64742A659BC1F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +114,10 @@
 				B2E1870219DE93190092BF7B /* Supporting Files */,
 				BB2ED8371D510C13ABF91052 /* LoginFormView.m */,
 				BB2ED5C40B8A6FEF558AAA3A /* LoginFormView.h */,
+				BB2EDC8C059BC571ECD14524 /* UIColor+EE.m */,
+				BB2ED6A72B9D67FAFCAC8015 /* UIColor+EE.h */,
+				BB2ED9322610B9965FBF011F /* FormModel.m */,
+				BB2ED6A894187C83B5AE8014 /* FormModel.h */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -307,6 +317,8 @@
 				B2E1870819DE93190092BF7B /* AppDelegate.m in Sources */,
 				B2E1870519DE93190092BF7B /* main.m in Sources */,
 				BB2ED886B8A5C48D51366038 /* LoginFormView.m in Sources */,
+				BB2ED99A1293D04BD6689EFE /* UIColor+EE.m in Sources */,
+				BB2EDEEC94AE066E25870439 /* FormModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
