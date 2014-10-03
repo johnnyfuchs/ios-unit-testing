@@ -12,7 +12,8 @@
 		B2E1870819DE93190092BF7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E1870719DE93190092BF7B /* AppDelegate.m */; };
 		B2E1870B19DE93190092BF7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E1870A19DE93190092BF7B /* ViewController.m */; };
 		B2E1871019DE93190092BF7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E1870F19DE93190092BF7B /* Images.xcassets */; };
-		B2E1871F19DE93190092BF7B /* loginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E1871E19DE93190092BF7B /* loginTests.m */; };
+		BB2ED1510211A261E086C9D7 /* LoginViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2ED371CF4591DAF70EC138 /* LoginViewSpec.m */; };
+		BB2ED886B8A5C48D51366038 /* LoginFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2ED8371D510C13ABF91052 /* LoginFormView.m */; };
 		D183358E01B947AFA446276E /* libPods-loginTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4E6FA053B34F63A61582AD /* libPods-loginTests.a */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +40,9 @@
 		B2E1870F19DE93190092BF7B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B2E1871819DE93190092BF7B /* loginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E1871D19DE93190092BF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2E1871E19DE93190092BF7B /* loginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loginTests.m; sourceTree = "<group>"; };
+		BB2ED371CF4591DAF70EC138 /* LoginViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewSpec.m; sourceTree = "<group>"; };
+		BB2ED5C40B8A6FEF558AAA3A /* LoginFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginFormView.h; sourceTree = "<group>"; };
+		BB2ED8371D510C13ABF91052 /* LoginFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginFormView.m; sourceTree = "<group>"; };
 		D31287655D7C4106BF5651CC /* Pods-loginTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginTests.xcconfig"; path = "Pods/Pods-loginTests.xcconfig"; sourceTree = "<group>"; };
 		FB7263C5DED64742A659BC1F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +106,8 @@
 				B2E1870A19DE93190092BF7B /* ViewController.m */,
 				B2E1870F19DE93190092BF7B /* Images.xcassets */,
 				B2E1870219DE93190092BF7B /* Supporting Files */,
+				BB2ED8371D510C13ABF91052 /* LoginFormView.m */,
+				BB2ED5C40B8A6FEF558AAA3A /* LoginFormView.h */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -119,8 +124,8 @@
 		B2E1871B19DE93190092BF7B /* loginTests */ = {
 			isa = PBXGroup;
 			children = (
-				B2E1871E19DE93190092BF7B /* loginTests.m */,
 				B2E1871C19DE93190092BF7B /* Supporting Files */,
+				BB2ED371CF4591DAF70EC138 /* LoginViewSpec.m */,
 			);
 			path = loginTests;
 			sourceTree = "<group>";
@@ -204,8 +209,6 @@
 			mainGroup = B2E186F619DE93190092BF7B;
 			productRefGroup = B2E1870019DE93190092BF7B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				B2E186FE19DE93190092BF7B /* login */,
@@ -303,6 +306,7 @@
 				B2E1870B19DE93190092BF7B /* ViewController.m in Sources */,
 				B2E1870819DE93190092BF7B /* AppDelegate.m in Sources */,
 				B2E1870519DE93190092BF7B /* main.m in Sources */,
+				BB2ED886B8A5C48D51366038 /* LoginFormView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2E1871F19DE93190092BF7B /* loginTests.m in Sources */,
+				BB2ED1510211A261E086C9D7 /* LoginViewSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +364,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -397,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -413,6 +417,7 @@
 				INFOPLIST_FILE = login/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};
@@ -424,6 +429,7 @@
 				INFOPLIST_FILE = login/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};

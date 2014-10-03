@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class LoginFormView;
+
 @interface ViewController : UIViewController
 
 

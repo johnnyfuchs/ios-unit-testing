@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "LoginFormView.h"
 
 @interface ViewController ()
 
+@property(nonatomic, strong) LoginFormView *loginView;
 @end
 
 @implementation ViewController
@@ -17,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor greenColor];
+    self.loginView = [[LoginFormView alloc] init];
+    [self.view addSubview:self.loginView];
 
 }
 
