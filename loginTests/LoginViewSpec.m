@@ -64,6 +64,7 @@ describe(@"A login view", ^{
         });
 
         it(@"Should not default to hidden", ^{
+            // bad test
             [[theValue(view.hidden) should] beNo];
         });
 

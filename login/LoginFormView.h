@@ -12,11 +12,9 @@
 typedef void (^OnSubmitFormViewBlock)(LoginFormView *loginFormView);
 
 @interface LoginFormView : UIView
-// 1
-@property(nonatomic, strong) UITextField *usernameField;
-@property(nonatomic, strong) UITextField *passwordField;
-@property(nonatomic, strong) UIButton *submitButton;
-@property(nonatomic, copy)  OnSubmitFormViewBlock onSubmit;
-@property(nonatomic, assign) FormModel *model;
-
+@property (nonatomic, strong) UITextField *usernameField;
+@property (nonatomic, strong) UITextField *passwordField;
+@property (nonatomic, strong) UIButton *submitButton;
+@property (nonatomic, copy) OnSubmitFormViewBlock onSubmit;
+@property (nonatomic, strong) FormModel *model;
 @end

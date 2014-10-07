@@ -10,11 +10,11 @@
 
 @implementation LoginFormView
 
-
 - (instancetype)initWithFrame:(CGRect)frame {
+
     CGRect minFrame = frame;
     minFrame.size.height = MAX(frame.size.height, 150);
-    minFrame.size.width = MAX(frame.size.width, 320);
+    minFrame.size.width = MAX(frame.size.height, 320);
 
     self = [super initWithFrame:minFrame];
     if (self) {
@@ -22,11 +22,11 @@
         CGRect bounds = minFrame;
         bounds.origin = CGPointZero;
 
-        self.usernameField = [[UITextField alloc] initWithFrame:bounds];
+        self.usernameField = [[UITextField alloc] initWithFrame:frame];
         self.usernameField.backgroundColor = [UIColor grayColor];
         [self addSubview:self.usernameField];
 
-        self.passwordField = [[UITextField alloc] initWithFrame:bounds];
+        self.passwordField = [[UITextField alloc] initWithFrame:frame];
         self.passwordField.backgroundColor = [UIColor grayColor];
         [self addSubview:self.passwordField];
 
@@ -37,24 +37,19 @@
         [self.submitButton setTitle:@"SomeTitle" forState:UIControlStateNormal];
         [self.submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         self.submitButton.backgroundColor = [UIColor pinkColor];
-        [self.submitButton addTarget:self action:@selector(handleSubmit) forControlEvents:UIControlEventTouchUpInside];
+        [self.submitButton addTarget:self action:@selector(handleTap) forControlEvents:UIControlEventTouchUpInside];
 
-        // 2
         self.passwordField.secureTextEntry = YES;
     }
 
     return self;
 }
 
-- (void)handleSubmit {
-    if(!self.onSubmit){
-        NSLog(@"LoginFormView warning: No submission handler set.");
-        return;
+- (void)handleTap {
+    // logging what went wrong
+    if(self.onSubmit){
+        self.onSubmit(self);
     }
-    [self.passwordField resignFirstResponder];
-    [self.usernameField resignFirstResponder];
-
-    self.onSubmit(self);
 }
 
 - (void)layoutSubviews {
@@ -70,8 +65,15 @@
     self.submitButton.frame = CGRectInset(submitRect, 1, 1);
 }
 
-- (void)setModel:(FormModel *)model {
 
+- (FormModel *)model {
+    FormModel *model = [FormModel new];
+    model.username = self.usernameField.text;
+    model.password = self.passwordField.text;
+    return model;
+}
+
+- (void)setModel:(FormModel *)model {
     self.usernameField.placeholder = model.usernamePlaceholder;
     self.usernameField.text = model.username;
 
@@ -79,14 +81,6 @@
     self.passwordField.text = model.password;
 
     [self.submitButton setTitle:model.loginTitle forState:UIControlStateNormal];
-
-}
-
-- (FormModel *)model {
-    FormModel *model = [FormModel new];
-    model.username = self.usernameField.text;
-    model.password = self.passwordField.text;
-    return model;
 }
 
 
